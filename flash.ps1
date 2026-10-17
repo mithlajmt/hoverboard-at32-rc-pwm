@@ -1,4 +1,5 @@
 # One-Click Flash Script for AT32F413RCT7 Hoverboard Board using ST-Link
+# Author: Mithlaj MT (@mithlajmt)
 param (
     [switch]$Unlock,
     [switch]$Check,

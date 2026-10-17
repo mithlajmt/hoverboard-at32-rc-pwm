@@ -1,5 +1,8 @@
 # HoverRun: AT32F413 Hoverboard RC PWM Firmware
 
+> **Modified & Enhanced by Mithlaj MT ([@mithlajmt](https://github.com/mithlajmt))**  
+> Direct RC PWM dual-channel receiver control, custom AT32F413 factory protection unlocker, automated ST-Link flashing toolchain, and differential drive robotics mixer.
+
 High-performance direct **RC PWM control firmware** and automated **ST-Link flashing/unlocking toolchain** for hoverboard mainboards equipped with the **ArteryTek AT32F413RCT7** microcontroller.
 
 Built for mobile robots, rovers, AGVs, electric carts, and DIY vehicles.
@@ -135,3 +138,19 @@ For in-depth explanations of:
 * Live UART diagnostic telemetry (`PB10` / `PB11`)
 
 See the full manual: [**`Docs/HOVERBOARD_RC_PWM_GUIDE.md`**](file:///c:/Users/ACM/Documents/bls%20robo/HoverRunFW-main/HoverRunFW-main/Docs/HOVERBOARD_RC_PWM_GUIDE.md).
+
+---
+
+## Author & Acknowledgments
+
+### Project Modifications & RC PWM Implementation
+* **Author / Maintainer**: **Mithlaj MT** ([@mithlajmt](https://github.com/mithlajmt))
+* **Key Contributions & Enhancements**:
+  * **RC PWM Dual-Channel Driver** ([`Src/rc_pwm.c`](file:///c:/Users/ACM/Documents/bls%20robo/HoverRunFW-main/HoverRunFW-main/Src/rc_pwm.c), [`Inc/rc_pwm.h`](file:///c:/Users/ACM/Documents/bls%20robo/HoverRunFW-main/HoverRunFW-main/Inc/rc_pwm.h)): Direct microsecond timer edge capture on PA2/PA3 with failsafe loss-of-signal motor cutoff.
+  * **Differential Drive Mixer**: Integrated tank-style steering mixer with slew-rate limiting, low-pass filtering, and deadband compensation.
+  * **AT32F413 Hardware Unlocker** ([`Src/unlock_at32.s`](file:///c:/Users/ACM/Documents/bls%20robo/HoverRunFW-main/HoverRunFW-main/Src/unlock_at32.s)): Custom ARM assembly SRAM payload that permanently clears factory Flash Access Protection (FAP Level 1).
+  * **Automated ST-Link Pipeline** ([`build.ps1`](file:///c:/Users/ACM/Documents/bls%20robo/HoverRunFW-main/HoverRunFW-main/build.ps1), [`flash.ps1`](file:///c:/Users/ACM/Documents/bls%20robo/HoverRunFW-main/HoverRunFW-main/flash.ps1)): One-command build, hardware check, option byte unlock, and flashing toolchain with OpenOCD auto-discovery.
+  * **Comprehensive Documentation** ([`Docs/HOVERBOARD_RC_PWM_GUIDE.md`](file:///c:/Users/ACM/Documents/bls%20robo/HoverRunFW-main/HoverRunFW-main/Docs/HOVERBOARD_RC_PWM_GUIDE.md)): Complete electrical pinout, +15V safety hazard warnings, and future adaptation guides.
+
+### Upstream Credits
+* Base BLDC motor commutation logic and HAL drivers derived from [HoverRunFW](https://github.com/hwalli92/HoverRunFW), [thanek](https://github.com/thanek/hoverboard-firmware-hack), and the [bipropellant](https://github.com/bipropellant/bipropellant-hoverboard-firmware) community.

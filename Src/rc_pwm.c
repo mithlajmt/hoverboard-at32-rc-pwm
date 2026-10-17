@@ -1,3 +1,9 @@
+/**
+ * @file rc_pwm.c
+ * @brief Dual-channel RC PWM input driver with hardware timer capture & failsafe
+ * @author Mithlaj MT (@mithlajmt)
+ */
+
 #include "rc_pwm.h"
 #include "at32f4xx.h"
 #include "defines.h"

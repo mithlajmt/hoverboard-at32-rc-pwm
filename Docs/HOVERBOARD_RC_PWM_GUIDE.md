@@ -1,5 +1,8 @@
 # HoverRun Hoverboard Controller: RC PWM Operation & Engineering Guide
 
+> **Author & Implementation: Mithlaj MT ([@mithlajmt](https://github.com/mithlajmt))**  
+> Custom RC PWM firmware, AT32F413 hardware unlocker, and ST-Link flashing toolchain.
+
 This document is a comprehensive engineering guide and reference for the **HoverRunFW** firmware on hoverboard mainboards equipped with the **ArteryTek AT32F413RCT7** microcontroller. It explains the system architecture, how the direct RC PWM control operates, the root causes and permanent fixes for toolchain/flashing issues, and a step-by-step playbook for adapting new controllers, remotes, and motors in the future.
 
 ---

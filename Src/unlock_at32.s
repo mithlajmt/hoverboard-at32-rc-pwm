@@ -1,3 +1,9 @@
+/*
+ * AT32F413 Hardware Flash Access Protection (FAP Level 1) Unlock Stub
+ * Author: Mithlaj MT (@mithlajmt)
+ * Runs directly in SRAM at 0x20000000 to clear RDPRT & mass erase flash
+ */
+
 .syntax unified
 .thumb
 .text

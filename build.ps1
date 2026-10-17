@@ -1,4 +1,5 @@
 # One-Click Build Script for HoverRunFW on Windows using ARM GCC
+# Author: Mithlaj MT (@mithlajmt)
 param (
     [switch]$Clean
 )

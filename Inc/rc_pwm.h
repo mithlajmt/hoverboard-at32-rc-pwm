@@ -1,3 +1,9 @@
+/**
+ * @file rc_pwm.h
+ * @brief Dual-channel RC PWM interface for AT32F413 Hoverboard Controller
+ * @author Mithlaj MT (@mithlajmt)
+ */
+
 #pragma once
 
 #include <stdint.h>
