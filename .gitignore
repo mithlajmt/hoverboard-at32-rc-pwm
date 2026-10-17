@@ -1,0 +1,30 @@
+# Build directories & compilation artifacts
+build/
+*.bin
+*.hex
+*.elf
+*.o
+*.d
+*.map
+
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# IDEs & Debugger configurations
+.vscode/
+.idea/
+.cproject
+.project
+JLinkSettings.ini
+*.launch
+
+# OS & Temporary files
+Thumbs.db
+[Dd]esktop.ini
+.DS_Store
+*.log
+*.tmp
+*.bak
+*~
